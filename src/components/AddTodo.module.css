@@ -1,0 +1,12 @@
+.todo-input {
+  height: 35px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: black;
+}
+
+.todo-btn{
+  width: 90px;
+  margin-top: -2px;
+}
