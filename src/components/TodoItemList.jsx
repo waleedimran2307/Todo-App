@@ -5,6 +5,7 @@ function TodoItemList({ todoItems, handlerDeleteButton }) {
     <>
       {todoItems.map((item) => (
         <TodoItems
+          Id={item.id}
           todoName={item.name}
           key={item.name}
           todoDate={item.date}

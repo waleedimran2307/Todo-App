@@ -10,11 +10,11 @@ function AddTodo({ handlerAddButton }) {
   const AddButton = (event) => {
     let todoName = todoNameElement.current.value;
     let date = dateElement.current.value;
+
     todoNameElement.current.value = "";
     dateElement.current.value = "";
     handlerAddButton(todoName, date);
   };
-
   return (
     <div className="container text-center mx-2">
       <div className="row p-4 mx-2 text-start">
@@ -38,7 +38,7 @@ function AddTodo({ handlerAddButton }) {
             className={`${styles["todo-btn"]} btn btn-success`}
             onClick={AddButton}
           >
-            <span className="py-5"> Add </span>  
+            <span className="py-5"> Add </span>
             <MdOutlineFileDownloadDone className="fs-4 " />
           </button>
         </div>

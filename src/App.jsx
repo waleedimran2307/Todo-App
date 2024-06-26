@@ -10,17 +10,22 @@ function App() {
 
   // Add button
   const handlerAddButton = (itemName, itemDate) => {
-
     setTodoItems((currentValue) => [
       ...currentValue,
-      { name: itemName, date: itemDate },
+      { id: newtodoItems.length + 1, name: itemName, date: itemDate },
     ]);
   };
 
   // Delete btn
-  const handlerDeleteButton = (todoName) => {
-    const removeItems = newtodoItems.filter((item) => item.name !== todoName);
-    setTodoItems(removeItems);
+  const handlerDeleteButton = (Id) => {
+    const removeItems = newtodoItems.filter((item) => item.id !== Id);
+
+    const updatedItems = removeItems.map((item, index) => ({
+      ...item,
+      id: index + 1,
+    }));
+
+    setTodoItems(updatedItems);
   };
 
   return (
